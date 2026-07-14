@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polly Arnan</title>
+<meta name="description" content="kid with no priors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f3ede3;
+    --ink: #232838;
+    --ink-dim: #9a9488;
+    --rule: #e3dbcb;
+    --link: #2f5f95;
+    --link-bg: #dfe9f7;
+    --link-bg-hover: #cddef2;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ -webkit-text-size-adjust: 100%; }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size:12.6px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-wrap: break-word;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  a{ color: var(--ink); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--ink-dim); transition: text-decoration-color 0.15s ease, color 0.15s ease; }
+  a:hover{ text-decoration-color: var(--ink); }
+  a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px; }
+
+  .wrap{
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 48px 24px 56px;
+  }
+
+  @media (max-width: 480px){
+    .wrap{ padding: 32px 18px 40px; }
+    .footer-line{ grid-template-columns: 1fr; row-gap: 2px; }
+    .footer-line .label{ margin-bottom: 2px; }
+  }
+
+  .social-row{
+    display:flex;
+    gap: 14px;
+    margin-bottom: 32px;
+    font-size: 11.7px;
+    color: var(--ink-dim);
+  }
+  .social-row a{ text-decoration: none; background: transparent; padding: 2px 6px; margin: 0 -6px; color: var(--ink-dim); }
+  .social-row a:hover{ color: var(--link); background: var(--link-bg); }
+  .social-row a.active{ background: var(--link-bg); color: var(--ink); font-weight: 600; }
+  .social-row a.active:hover{ background: var(--link-bg); }
+
+  h1{
+    font-size: 0.936rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 4px;
+  }
+  .tagline{
+    font-size: 0.855rem;
+    color: var(--ink-dim);
+    margin: 0 0 28px;
+  }
+
+  .bio li{
+    margin-bottom: 14px;
+    font-size: 0.855rem;
+    color: var(--ink);
+  }
+  .bio li:last-child{ margin-bottom: 0; }
+
+  hr{
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 36px 0;
+  }
+
+  h2{
+    font-size: 0.675rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 0 0 14px;
+  }
+  #shelf-head{
+    font-size: 0.945rem;
+    font-weight: 600;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--ink);
+  }
+  .shelf-subtitle{
+    font-size: 0.72rem;
+    font-style: oblique 6deg;
+    color: var(--ink-dim);
+    margin: -8px 0 14px;
+  }
+
+  section{ margin-bottom: 36px; }
+  section:last-of-type{ margin-bottom: 0; }
+
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li{
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 8px;
+    font-size: 0.855rem;
+  }
+  ul li::before{
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 0.6em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--ink-dim);
+  }
+  ul li:last-child{ margin-bottom: 0; }
+  ul li .author{ color: var(--ink-dim); }
+
+  .potentially{ margin-top: 18px; }
+  .potentially h3{
+    font-size: 0.675rem;
+    font-weight: 500;
+    color: var(--ink-dim);
+    margin: 0 0 10px;
+    text-transform: none;
+  }
+
+  footer{
+    margin-top: 40px;
+    padding-top: 16px;
+    padding-bottom: 40px;
+    border-top: 1px solid var(--rule);
+    font-size: 10.8px;
+    color: var(--ink-dim);
+  }
+  footer a{ color: var(--ink-dim); text-decoration-color: var(--ink-dim); }
+  footer a:hover{ color: var(--ink); text-decoration-color: var(--ink); }
+  .footer-line{
+    display: grid;
+    grid-template-columns: 8.5em minmax(0, 1fr);
+    column-gap: 0.75em;
+    row-gap: 2px;
+  }
+  .footer-line + .footer-line{ margin-top: 4px; }
+  .footer-line .label{ white-space: nowrap; }
+  .stalk-links{ display: flex; flex-direction: column; gap: 2px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav class="social-row" aria-label="Primary">
+    <a href="/" class="active">About</a>
+    <a href="https://www.linkedin.com/in/polly-arnan/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://x.com/pollisaarnan" target="_blank" rel="noopener">X</a>
+  </nav>
+
+  <h1>Polly Arnan</h1>
+  <p class="tagline">kid with no priors.</p>
+
+  <ul class="bio">
+    <li>Currently: mostly a forward deployed engineer at <a href="https://textql.com/" target="_blank" rel="noopener">TextQL</a>; otherwise, a novice carpenter out of a New York woodworking studio.</li>
+    <li>Previously: <a href="https://www.bvp.com/news/bessemers-2025-fellowship-class-on-how-gen-z-will-lead-differently-with-ai#Polly-Arnan" target="_blank" rel="noopener">Bessemer Fellow</a> with Bessemer Venture Partners and analyst at <a href="https://www.macquarie.com/us/en.html" target="_blank" rel="noopener">Macquarie</a> on infrastructure and real assets investments. I did my bachelor's degree at Columbia in computer science and economics.</li>
+  </ul>
+
+  <hr>
+
+  <section aria-labelledby="shelf-head">
+    <h2 id="shelf-head">Favorites from my bookshelf</h2>
+    <p class="shelf-subtitle">* = easy breezy reads you can finish in a day :)</p>
+    <ul>
+      <li><a href="https://www.ways-of-seeing.com/" target="_blank" rel="noopener">Ways of Seeing</a>*, <span class="author">John Berger</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century" target="_blank" rel="noopener">Capital in the Twenty-First Century</a>, <span class="author">Thomas Piketty</span></li>
+      <li><a href="https://lyreassociation.org/books-on-music/hemming-roy-discovering-great-music-a-new-listeners-guide-to-the-top-classical-composers-and-their-masterworks" target="_blank" rel="noopener">Discovering Great Music</a>, <span class="author">Roy Hemming</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/On_Women" target="_blank" rel="noopener">On Women</a>, <span class="author">Susan Sontag</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/Nicomachean_Ethics" target="_blank" rel="noopener">Nicomachean Ethics</a>*, <span class="author">Aristotle</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind" target="_blank" rel="noopener">Sapiens: A Brief History of Humankind</a>, <span class="author">Yuval Noah Harari</span></li>
+      <li><a href="https://canary---yellow.com/products/virgil-reader-vol-001" target="_blank" rel="noopener">The Virgil Reader</a>*, <span class="author">Virgil Abloh</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel" target="_blank" rel="noopener">Guns, Germs, and Steel: The Fates of Human Societies</a>, <span class="author">Jared Diamond</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea" target="_blank" rel="noopener">The Old Man and the Sea</a>*, <span class="author">Ernest Hemingway</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/The_Age_of_Surveillance_Capitalism" target="_blank" rel="noopener">The Age of Surveillance Capitalism</a>, <span class="author">Shoshana Zuboff</span></li>
+    </ul>
+  </section>
+
+  
+
+  <footer>
+    <div class="footer-line"><span class="label">reach me quick!</span> polly (dot) arnan (at) gmail.com</div>
+    <div class="footer-line">
+      <span class="label">stalk me!</span>
+      <div class="stalk-links">
+        <a href="https://www.linkedin.com/in/polly-arnan/" target="_blank" rel="noopener">linkedin.com/in/polly-arnan</a>
+        <a href="https://x.com/pollisaarnan" target="_blank" rel="noopener">x.com/pollisaarnan</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
