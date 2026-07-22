@@ -48,6 +48,8 @@
     padding: 48px 24px 56px;
   }
 
+  .title-spacer{ height: 64px; }
+
   @media (max-width: 480px){
     .wrap{ padding: 32px 18px 40px; }
     .footer-line{ grid-template-columns: 1fr; row-gap: 2px; }
@@ -66,17 +68,6 @@
   .social-row a.active{ background: var(--link-bg); color: var(--ink); font-weight: 600; }
   .social-row a.active:hover{ background: var(--link-bg); }
 
-  h1{
-    font-size: 0.936rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    margin: 0 0 4px;
-  }
-  .tagline{
-    font-size: 0.855rem;
-    color: var(--ink-dim);
-    margin: 0 0 28px;
-  }
 
   .bio li{
     margin-bottom: 14px;
@@ -168,13 +159,12 @@
 <div class="wrap">
 
   <nav class="social-row" aria-label="Primary">
-    <a href="/" class="active">About</a>
+    <a href="/" class="active">Home</a>
     <a href="https://www.linkedin.com/in/polly-arnan/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://x.com/pollisaarnan" target="_blank" rel="noopener">X</a>
   </nav>
 
-  <h1>Polly Arnan</h1>
-  <p class="tagline">kid with no priors.</p>
+  <div class="title-spacer"></div>
 
   <ul class="bio">
     <li>Currently: forward deployed engineer at <a href="https://textql.com/" target="_blank" rel="noopener">TextQL</a>; sometimes, a novice carpenter. NYC.</li>
